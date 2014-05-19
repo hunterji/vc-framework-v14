@@ -1,23 +1,30 @@
 ﻿//%attributes = {"lang":"en","invisible":true,"shared":true,"executedOnServer":true,"folder":"VC_Framework Monitor"} comment added and reserved by 4D.
 // --[HEADERSTART]-------------------------------------
 // User name (OS): jfletcher
-// Date and time: 04/06/12, 14:59:45
+// Date and time: 04/06/12, 15:01:43
 // ----------------------------------------------------
 // Description:
-//   Clear previous error state, allowing the Monitor
-//   to continue it's job.
+//   Start stored procedure to monitor code changes.
 //
-//   Start the Monitor if it wasn't running.
+//   Note: there can be only one.
+//   Note: executes on server.
 //
 //   Called by Macro.
 // --[HEADEREND]---------------------------------------
+C_LONGINT($stack_l;$PID_l;$error_l)
+C_TEXT($methodName_t;$processName_t)
+
 C_BOOLEAN(<>VC_Enabled_f)
-C_LONGINT($error_l)
 
 If (<>VC_Enabled_f)
-<>VC_ERROR_F:=False
 
-VC_MON_Start 
+$stack_l:=1024*1024
+$methodName_t:="VC_EXPORT_Process"
+$processName_t:=$methodName_t
+
+<>VC_StopExport_f:=False
+
+$PID_l:=New process($methodName_t;$stack_l;$processName_t;*)
 Else 
 UTIL_ERR_Startup 
 // This should be impossible, because you have to open
