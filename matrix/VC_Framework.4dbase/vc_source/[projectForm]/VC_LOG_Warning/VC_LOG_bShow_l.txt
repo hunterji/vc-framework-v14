@@ -1,2 +1,0 @@
-﻿//%attributes = {"lang":"en"} comment added and reserved by 4D.
-VC_LOG_ShowLog 
