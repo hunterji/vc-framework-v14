@@ -88,14 +88,16 @@ Here is a list of the setters:
 
 (Hint: these control the same settings as the startup parameters described above)
 
-VC_CONFIG_DeleteIgnoreSlowSet
-VC_CONFIG_DeleteOnChangeSet
-VC_CONFIG_DeleteProcDelaySet
-VC_CONFIG_DeleteProcDisableSet
-VC_CONFIG_ExportFormsSet
-VC_CONFIG_ExportMethodsSet
-VC_CONFIG_ExportProcDelaySet
-VC_CONFIG_MGPThresholdSet
+| Method | Parameter Type | Description |
+| --- | --- | --- |
+| VC_CONFIG_DeleteIgnoreSlowSet | Boolean | Deletion detection can have a performance impact. This setting controls whether or not to ignore it. |
+| VC_CONFIG_DeleteOnChangeSet | Boolean | Only check for deleted methods if the database stamp has changed. |
+| VC_CONFIG_DeleteProcDisableSet | Boolean | Enable or disable the deletion detection process. |
+| VC_CONFIG_DeleteProcDelaySet | Longint | Delay for the process that detects deleted methods. Measured in ticks. |
+| VC_CONFIG_ExportFormsSet | Boolean | Enable or disable form export. |
+| VC_CONFIG_ExportMethodsSet | Boolean | Enable or disable method export. |
+| VC_CONFIG_ExportProcDelaySet | Longint | Delay for the process that detects changes and exports them. Measured in ticks. |
+| VC_CONFIG_MGPThresholdSet | Longint | Deletion detection can have a performance impact. This setting controls the tolerance of that impact.  Default is 100 ms. |
 
 #### Shared methods
 
