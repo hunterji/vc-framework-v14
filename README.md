@@ -48,7 +48,7 @@ There are several configuration options that can be set during startup. This is 
 These are the possible settings:
 
 | Parameter | Type | Default | Description |
-| - | - | - | - |
+| --- | --- | --- | --- |
 | VC_DeleteIgnoreSlow | Boolean | False | Deletion detection can have a performance impact. This setting controls whether or not to ignore it. |
 | VC_DeleteOnChange | Boolean | False | Only check for deleted methods if the database stamp has changed. |
 | VC_DeleteProcDisabled | Boolean | False | Enable or disable the deletion detection process. |
@@ -102,7 +102,7 @@ VC_CONFIG_MGPThresholdSet
 Here us a list of the other shared methods:
 
 | Method | Description |
-| - | - |
+| --- | --- |
 | VC_DEBUG_BrowseVCDB | Allows you to browse the VC_Framework metadata stored in the VC_Data external database.
 | VC_DEBUG_GetExtAssetData | Copy the asset metadata from the VC_Data external database to a text variable.
 | VC_DELETE_ResolveError | When an error occurs at runtime, VC_Framework's process continue to run but in a disabled state. If you are able to resolve the error, you can run this method to enable the process again. This method can be called via a macro; in fact I recommend you just use the macro.
