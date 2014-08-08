@@ -134,7 +134,7 @@ $filePathPOSIX_t:=<>VCM_ROOT_POSIX_T+"/"+$currentAssetPath_t+".txt"
 : ($currentAssetType_t=<>VC_TYPE_Form_t)
 $filePathPOSIX_t:=<>VCF_ROOT_POSIX_T+"/"+$currentAssetPath_t+".json"
 End case 
-$filePath_t:=Convert path POSIX to system($filePathPOSIX_t)
+$filePath_t:=Convert path POSIX to system($filePathPOSIX_t;*)
 
 
 // Check to make sure it's ok to perform the action.
